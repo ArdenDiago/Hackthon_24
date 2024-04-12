@@ -1,0 +1,248 @@
+.size {
+  color: white;
+  background-color: #191919;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 50px;
+  font-size: 20px;
+}
+.span_color {
+  color: red;
+}
+
+.icons_row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+}
+
+.icons_col {
+  display: 50%;
+}
+.icons_col input {
+  width: 15%;
+}
+.icons_col img {
+  width: 46px;
+  color: rebeccapurple;
+}
+
+.form_border {
+  padding: 10px;
+  border-style: solid;
+  border-color: #414141;
+  border-width: 1px;
+  border-radius: 10px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 10px;
+  padding: 10px;
+  align-items: center;
+}
+.main-grid-form {
+  display: grid;
+  grid-template-columns: auto;
+  column-gap: 5px;
+  row-gap: 10px;
+}
+
+.btn-wrp-form {
+  padding-top: 30px;
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: auto auto auto auto;
+  width: fit-content;
+  /* background-color: rebeccapurple; */
+}
+
+/* Sidpannel */
+.alignText {
+  display: block;
+  grid-template-columns: auto;
+}
+
+.forEndBlock {
+  display: block;
+  justify-content: center;
+}
+.forEndFlex {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: auto auto;
+}
+.forEndFlex span {
+  margin-top: 3px;
+  width: 20px;
+  justify-content: center;
+}
+.width-increase {
+  width: 150%;
+}
+.two-wrp {
+  display: grid;
+  grid-template-columns: auto auto;
+  /* column-width: 70px; */
+  column-gap: 10px;
+}
+.align-btn {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 20px;
+}
+.errorLog span {
+  background-color: rgba(255, 0, 0, 0.13);
+  display: block;
+  border-radius: 10px;
+  padding: 5px;
+  width: fit-content;
+  color: rgb(255, 255, 255);
+  /* text-align: center; */
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.submit-div {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  column-gap: 10px;
+  row-gap: 10px;
+}
+.btn-size {
+  width: 100%;
+}
+
+.errorLogSubmit {
+  display: block;
+  background-color: rgba(255, 0, 0, 0.13);
+  border-radius: 20px;
+  text-align: center;
+}
+.errorLogSubmit span {
+  display: block;
+}
+/* loader */
+.loader-container {
+  width: 100cm;
+  height: 100cm;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.834)
+      url("https://media.giphy.com/media/8agqybiK5LW8qrG3vJ/giphy.gif") center
+      no-repeat;
+  z-index: 1;
+}
+
+
+.spinner {
+  width: 64px;
+  height: 64px;
+  border: 8px solid;
+  border-color: #3d5af1 transparent #3d5af1 transparent;
+  border-radius: 50%;
+  animation: spin-anim 1.2s linear infinite;
+}
+
+.react-logo-main {
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: rgb(44, 43, 43);
+  width: 900px;
+  border-radius: 20px;
+  padding: 20px;
+  justify-items: center;
+  align-items: center;
+  column-gap: 10px;
+}
+@keyframes spin-anim {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .react-logo-main {
+    width: 400px;
+  }
+  .submit-div {
+    grid-template-columns: auto;
+    row-gap: 10px;
+  }
+  .two-wrp {
+    grid-template-columns: auto;
+  }
+  .main-grid-form {
+    justify-content: center;
+  }
+  .form_border {
+    /* width: fit-content; */
+    display: flexbox;
+    grid-template-columns: auto;
+  }
+  .form-row {
+    grid-template-columns: auto auto;
+    column-gap: 5px;
+    padding: 5px;
+    width: fit-content;
+  }
+
+  .btn-wrp-form {
+    grid-template-columns: auto;
+    width: fit-content;
+    /* background-color: rebeccapurple; */
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .submit-div {
+    grid-template-columns: auto;
+    row-gap: 10px;
+  }
+  .two-wrp {
+    grid-template-columns: auto;
+  }
+  .two-wrp {
+    grid-template-columns: auto;
+  }
+
+  .form_border {
+    width: fit-content;
+  }
+  .form-row {
+    grid-template-columns: auto auto;
+    column-gap: 5px;
+    padding: 5px;
+    width: fit-content;
+  }
+
+  .btn-wrp-form {
+    grid-template-columns: auto;
+    width: fit-content;
+    /* background-color: rebeccapurple; */
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .form_border {
+    width: fit-content;
+  }
+  .form-row {
+    grid-template-columns: auto auto;
+    column-gap: 5px;
+    padding: 5px;
+    width: fit-content;
+  }
+
+  .btn-wrp-form {
+    grid-template-columns: "auto auto";
+    width: fit-content;
+    /* background-color: rebeccapurple; */
+  }
+}
