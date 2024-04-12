@@ -71,8 +71,8 @@ export const images = [
   },
 ];
 
-// Have to use useState in Main.jsx 
-import bgHackthon from "../assets/img/PhoneMedia/Hackthon.jpeg"
+// Have to use useState in Main.jsx
+import bgHackthon from "../assets/img/PhoneMedia/Hackthon.jpeg";
 import bgNFS from "../assets/img/PhoneMedia/NFS.jpeg";
 import bgFreeFire from "../assets/img/PhoneMedia/FreeFire.jpeg";
 import bgBGMI from "../assets/img/PhoneMedia/BGMI.jpeg";
@@ -85,7 +85,7 @@ export const sliderInfo = [
     detailsLink: "#0",
     formLink: "#0",
     eventName: "Hackthon",
-    text: "Join us for an exhilarating experience at our Intra Collegiate Techno Fest, presented by the Department of Computer Science! Explore cutting-edge innovations, showcase your talents, and network with like-minded individuals. Get ready for a day filled with coding challenges, project exhibitions, and inspiring tech talks. Don't miss out on this opportunity to dive into the world of technology!"
+    text: "Join us for an exhilarating experience at our Intra Collegiate Techno Fest, presented by the Department of Computer Science! Explore cutting-edge innovations, showcase your talents, and network with like-minded individuals. Get ready for a day filled with coding challenges, project exhibitions, and inspiring tech talks. Don't miss out on this opportunity to dive into the world of technology!",
   },
   {
     key: 3,
@@ -94,8 +94,8 @@ export const sliderInfo = [
     detailsLink: "#0",
     formLink: "#0",
     eventName: "Need For Speed",
-  overlayer: 'back_color',
-  text: "Gear up for high-speed thrills at our NFS tournament during the Intra-Collegiate Techno Fest! Compete, conquer, and emerge as the ultimate racing champion!"
+    overlayer: "back_color",
+    text: "Gear up for high-speed thrills at our NFS tournament during the Intra-Collegiate Techno Fest! Compete, conquer, and emerge as the ultimate racing champion!",
   },
   {
     key: 4,
@@ -104,8 +104,8 @@ export const sliderInfo = [
     detailsLink: "#0",
     formLink: "#0",
     eventName: "Free Fire",
-    overlayer: 'back_color',
-    text: "Prepare for intense battles in our Free Fire tournament at the Intra-Collegiate Techno Fest! Show off your skills, outlast the competition, and claim victory in the ultimate gaming showdown!"
+    overlayer: "back_color",
+    text: "Prepare for intense battles in our Free Fire tournament at the Intra-Collegiate Techno Fest! Show off your skills, outlast the competition, and claim victory in the ultimate gaming showdown!",
   },
   {
     key: 5,
@@ -114,9 +114,9 @@ export const sliderInfo = [
     detailsLink: "#0",
     formLink: "#0",
     eventName: "BGMI",
-  overlayer: 'back_color',
-  text: "Enter the battlegrounds in our BGMI tournament at the Intra-Collegiate Techno Fest! Strategize, survive, and dominate to emerge as the last one standing in this epic gaming battle!"
-  }
+    overlayer: "back_color",
+    text: "Enter the battlegrounds in our BGMI tournament at the Intra-Collegiate Techno Fest! Strategize, survive, and dominate to emerge as the last one standing in this epic gaming battle!",
+  },
 ];
 
 import o1 from "../assets/img/team/01.jpg";
@@ -173,7 +173,6 @@ import event3 from "../assets/img/EventsImges/NFS.jpeg";
 import event5 from "../assets/img/EventsImges/BGMI.jpeg";
 import event4 from "../assets/img/EventsImges/FreeFire.jpeg";
 
-
 export const eventDataList = [
   {
     key: 1,
@@ -216,7 +215,7 @@ export const singleEvents = [
   {
     key: 1,
     eventName: "Poster spoofing",
-    selected: 'PS'
+    selected: "PS",
   },
   {
     key: 2,
@@ -267,5 +266,62 @@ export const departmentsList = [
   {
     indexValue: 6,
     text: "BSC 3",
+  },
+
+  {
+    indexValue: 7,
+    text: "BA 1",
+  },
+  {
+    indexValue: 8,
+    text: "BA 2",
+  },
+  {
+    indexValue: 9,
+    text: "BA 3",
+  },
+
+  {
+    indexValue: 10,
+    text: "BCOM 1",
+  },
+  {
+    indexValue: 11,
+    text: "BCOM 2",
+  },
+  {
+    indexValue: 12,
+    text: "BCOM 3",
+  },
+
+  {
+    indexValue: 13,
+    text: "BBA 1",
+  },
+  {
+    indexValue: 14,
+    text: "BBA 2",
+  },
+  {
+    indexValue: 15,
+    text: "BBA 3",
+  },
+
+  {
+    indexValue: 16,
+    text: "MA 1",
+  },
+  {
+    indexValue: 17,
+    text: "MA 2",
+  },
+
+  {
+    indexValue: 18,
+    text: "MSC 1",
+  },
+  {
+    indexValue: 19,
+    text: "MSC 2",
   },
 ];
