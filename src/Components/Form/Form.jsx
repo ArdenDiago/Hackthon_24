@@ -232,7 +232,6 @@ export default function Form() {
 
     // Database
     if (errorLogs.length === 0) {
-      console.log("Working");
       axios.post(
         `https://sheet.best/api/sheets/4c28782e-bb0e-4980-ab1a-a0583769b4b1`,
         {
