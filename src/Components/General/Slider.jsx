@@ -55,7 +55,8 @@ export default function Slider({
               <div className="btn-align-row">
                 <a
                   className="btn-one-light"
-                  href={detailsLink}
+                  href='https://drive.google.com/file/d/1Wkj9GMopCUNcox-AxvxC-LGaWm22QuOU/view'
+                  target="blank"
                   data-animation="fadeInUp"
                   data-delay="1.9s"
                 >

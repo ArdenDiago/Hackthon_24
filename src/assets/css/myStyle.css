@@ -1,5 +1,5 @@
 .center-grid {
-  display: flex;
+  display:flex;
   justify-content: center;
   align-items: center;
 }
@@ -62,6 +62,15 @@ span {
   display: flex;
   width: 100%;
 }
+
+.details-container {
+  background-color: rebeccapurple;
+  text-align: center;
+}
+.details-container-right {
+  display: block;
+  text-align: center;
+}
 /* .main__logo img{ */
   /* width: 9px; */
 /* } */
@@ -90,6 +99,9 @@ my screen 1351
 
 /* Media Tags */
 @media screen and (max-width: 350px) {
+  .details-container {
+
+  }
   .logo-media img {
     width: 90px;
   }

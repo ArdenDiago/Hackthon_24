@@ -16,7 +16,6 @@ export default function Main() {
   const lengthOfDataSet = sliderInfo.length;
   const delay = 5000;
   const timeoutRef = useRef();
-
   // Clearing the call from the stack
   function resetTimeOut() {
     if (timeoutRef.current) {

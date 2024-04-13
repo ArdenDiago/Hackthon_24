@@ -5,6 +5,7 @@ import "./form.css";
 
 // Components
 import Departments from "./Departments/Departments";
+import SnackBar from "./SnackBar/SnackBar";
 
 // Data
 import { departmentsList } from "../../Data/GeneralData";
@@ -23,7 +24,7 @@ export default function Form() {
   const [Idea_Presentation, setIdeaPresentation] = useState(false);
   const [Free_Fire, setFreeFire] = useState(false);
   const [BGMI, setBGMI] = useState(false);
-  const [checkSubmit, setSubmit] = useState(true);
+  const [checkSubmit, setSubmit] = useState(false);
 
   // Participant name data Free Fire
   const [Free_Fire_Participants_2, set_Free_Fire_Participants_2] = useState();
@@ -248,7 +249,12 @@ export default function Form() {
           BGMI_Team,
         }
       );
-      setSubmit(false)
+      setSubmit(true);
+
+      setTimeout(() => {
+        setSubmit(false);
+        window.location.reload(window.location.href+'#form_section');
+      }, 5000);
     }
   }
   // Members
@@ -258,460 +264,453 @@ export default function Form() {
       id="form_section"
       className="checkout-area pt-130 pb-130 event-list-margin"
     >
-      {checkSubmit ? (
-        <div className="container center-grid">
-          <div className="row g-4">
-            <div id="myForm" className="checkout__item-left sub-bg">
+      <div className="container center-grid mb-100">
+        <div className="row g-4">
+          <div id="myForm" className="checkout__item-left sub-bg">
+            <div>
               <div>
+                <h3 className="mb-40">Registration Form</h3>
+                <input
+                  className="mb-20"
+                  id="Name"
+                  required
+                  type="text"
+                  value={Name}
+                  placeholder="Enter you Name"
+                  onChange={(e) => setName(e.target.value)}
+                ></input>
+                <input
+                  className="mb-20"
+                  id="Phone_NO"
+                  required
+                  type="tel"
+                  placeholder="Enter you Phone No"
+                  value={Phone_NO}
+                  onChange={(e) => setPhoneNo(e.target.value)}
+                ></input>
+                {/* Class */}
                 <div>
-                  <h3 className="mb-40">Registration Form</h3>
-                  <input
-                    className="mb-20"
-                    id="Name"
-                    required
-                    type="text"
-                    value={Name}
-                    placeholder="Enter you Name"
-                    onChange={(e) => setName(e.target.value)}
-                  ></input>
-                  <input
-                    className="mb-20"
-                    id="Phone_NO"
-                    required
-                    type="tel"
-                    placeholder="Enter you Phone No"
-                    value={Phone_NO}
-                    onChange={(e) => setPhoneNo(e.target.value)}
-                  ></input>
-                  {/* Class */}
-                  <div>
-                    <select
-                      className="mb-20 btn-group size"
-                      name="subject"
-                      onChange={(e) => setDepartment(e.target.value)}
+                  <select
+                    className="mb-20 btn-group size"
+                    name="subject"
+                    onChange={(e) => setDepartment(e.target.value)}
+                  >
+                    {departmentsList.map((department) => (
+                      <Departments
+                        key={department.indexValue}
+                        {...department}
+                      />
+                    ))}
+                  </select>
+                </div>
+
+                {/* button for events */}
+                <div className="checkout__item-left sub-bg main-grid-form">
+                  {/* Single Event Button */}
+                  <div className="form_border">
+                    <label className="mb-10" htmlFor="companyName">
+                      Individual Events
+                    </label>
+                    <div className="btn-wrp-form">
+                      {/*  */}
+                      {/*  */}
+                      {/* my Final thought  */}
+                      {/* NFS */}
+                      <div className="form-row">
+                        <div className={myCss.switch}>
+                          <input
+                            type="checkbox"
+                            id="NFS"
+                            value="NFS"
+                            onChange={(e) => setValues(e)}
+                          ></input>
+                          <label htmlFor="toggle">
+                            <i className={myCss.bulb}>
+                              <span className={myCss.bulbCenter}></span>
+                              <span className={myCss.filament1}></span>
+                              <span className={myCss.filament2}></span>
+                              <span className={myCss.reflections}>
+                                <span></span>
+                              </span>
+                              <span className={myCss.sparks}>
+                                <i className={myCss.spark1}></i>
+                                <i className={myCss.spark2}></i>
+                                <i className={myCss.spark3}></i>
+                                <i className={myCss.spark4}></i>
+                              </span>
+                            </i>
+                          </label>
+                        </div>
+                        <div className="form-row">NFS</div>
+                      </div>
+                      {/* Poster Spoofing */}
+                      <div className="form-row">
+                        <div className={myCss.switch}>
+                          <input
+                            type="checkbox"
+                            id="PosterSpoofing"
+                            value="PosterSpoofing"
+                            onChange={(e) => setValues(e)}
+                          ></input>
+                          <label htmlFor="toggle">
+                            <i className={myCss.bulb}>
+                              <span className={myCss.bulbCenter}></span>
+                              <span className={myCss.filament1}></span>
+                              <span className={myCss.filament2}></span>
+                              <span className={myCss.reflections}>
+                                <span></span>
+                              </span>
+                              <span className={myCss.sparks}>
+                                <i className={myCss.spark1}></i>
+                                <i className={myCss.spark2}></i>
+                                <i className={myCss.spark3}></i>
+                                <i className={myCss.spark4}></i>
+                              </span>
+                            </i>
+                          </label>
+                        </div>
+                        <div className="form-row">Poster Spoofing</div>
+                      </div>
+
+                      {/*  */}
+                      {/*  */}
+                      {/*  */}
+                    </div>
+                  </div>
+
+                  {/* Group */}
+                  <div className="form_border">
+                    <label className="mb-10" htmlFor="companyName">
+                      Group Events
+                    </label>
+                    <div className="btn-wrp-form">
+                      {/*  */}
+                      {/*  */}
+                      {/* my Final thought  */}
+                      {/* Idea Presentation */}
+                      <div className="form-row">
+                        <div className={myCss.switch}>
+                          <input
+                            type="checkbox"
+                            id="IdeaPresentation"
+                            value="IdeaPresentation"
+                            onChange={(e) => setValues(e)}
+                          ></input>
+                          <label htmlFor="toggle">
+                            <i className={myCss.bulb}>
+                              <span className={myCss.bulbCenter}></span>
+                              <span className={myCss.filament1}></span>
+                              <span className={myCss.filament2}></span>
+                              <span className={myCss.reflections}>
+                                <span></span>
+                              </span>
+                              <span className={myCss.sparks}>
+                                <i className={myCss.spark1}></i>
+                                <i className={myCss.spark2}></i>
+                                <i className={myCss.spark3}></i>
+                                <i className={myCss.spark4}></i>
+                              </span>
+                            </i>
+                          </label>
+                        </div>
+                        <div className="form-row">Idea Presentation</div>
+                      </div>
+
+                      {/* Free fire */}
+                      <div className="form-row">
+                        <div className={myCss.switch}>
+                          <input
+                            type="checkbox"
+                            id="FreeFire"
+                            value="FreeFire"
+                            onChange={(e) => setValues(e)}
+                          ></input>
+                          <label htmlFor="toggle">
+                            <i className={myCss.bulb}>
+                              <span className={myCss.bulbCenter}></span>
+                              <span className={myCss.filament1}></span>
+                              <span className={myCss.filament2}></span>
+                              <span className={myCss.reflections}>
+                                <span></span>
+                              </span>
+                              <span className={myCss.sparks}>
+                                <i className={myCss.spark1}></i>
+                                <i className={myCss.spark2}></i>
+                                <i className={myCss.spark3}></i>
+                                <i className={myCss.spark4}></i>
+                              </span>
+                            </i>
+                          </label>
+                        </div>
+                        <div className="form-row">Free Fire</div>
+                      </div>
+
+                      {/* BGMI */}
+                      <div className="form-row">
+                        <div className={myCss.switch}>
+                          <input
+                            type="checkbox"
+                            id="BGMI"
+                            value="BGMI"
+                            onChange={(e) => setValues(e)}
+                          ></input>
+                          <label htmlFor="toggle">
+                            <i className={myCss.bulb}>
+                              <span className={myCss.bulbCenter}></span>
+                              <span className={myCss.filament1}></span>
+                              <span className={myCss.filament2}></span>
+                              <span className={myCss.reflections}>
+                                <span></span>
+                              </span>
+                              <span className={myCss.sparks}>
+                                <i className={myCss.spark1}></i>
+                                <i className={myCss.spark2}></i>
+                                <i className={myCss.spark3}></i>
+                                <i className={myCss.spark4}></i>
+                              </span>
+                            </i>
+                          </label>
+                        </div>
+                        <div className="form-row">BGMI</div>
+                      </div>
+
+                      {/*  */}
+                      {/*  */}
+                      {/*  */}
+                    </div>
+                  </div>
+                  {/*  */}
+                  {/*  */}
+                  {/*  */}
+
+                  {/* Free Fire */}
+                  {Free_Fire && (
+                    <div className="form_border">
+                      <label className="mb-10" htmlFor="companyName">
+                        Free Fire Participants Names
+                      </label>
+                      <div className="btn-wrp-form width-increase">
+                        <div className="two-wrp">
+                          {/* 1 */}
+                          <input
+                            className="mb-20"
+                            required
+                            type="text"
+                            disabled={true}
+                            value={Name}
+                            placeholder=""
+                          ></input>
+                          {/* 2 */}
+                          <input
+                            className="mb-20"
+                            id="Free_Fire_Participants_2"
+                            required
+                            type="text"
+                            disabled={EditableStateFreeFire}
+                            value={Free_Fire_Participants_2}
+                            placeholder="Members Name"
+                            onChange={(e) =>
+                              set_Free_Fire_Participants_2(e.target.value)
+                            }
+                          ></input>
+                          {/* 3 */}
+                          <input
+                            className="mb-20"
+                            id="Free_Fire_Participants_3"
+                            required
+                            type="text"
+                            disabled={EditableStateFreeFire}
+                            value={Free_Fire_Participants_3}
+                            placeholder="Members Name"
+                            onChange={(e) =>
+                              set_Free_Fire_Participants_3(e.target.value)
+                            }
+                          ></input>
+                          {/* 4 */}
+                          <input
+                            className="mb-20"
+                            id="Free_Fire_Participants_4"
+                            required
+                            type="text"
+                            disabled={EditableStateFreeFire}
+                            value={Free_Fire_Participants_4}
+                            placeholder="Members Name"
+                            onChange={(e) =>
+                              set_Free_Fire_Participants_4(e.target.value)
+                            }
+                          ></input>
+                        </div>
+                      </div>
+                      <div className="btn-align-row submitRight">
+                        <div className="align-btn">
+                          <button
+                            className="btn-one"
+                            onClick={() => {
+                              checkConditionsFreeFire();
+                            }}
+                          >
+                            <span>
+                              {EditableStateFreeFire ? "Edit" : "Save"}
+                            </span>
+                          </button>
+                          <div className="errorLog">
+                            {Free_Fire_Error_Log[0]}{" "}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Idea Presentation */}
+                  {Idea_Presentation && (
+                    <div className="form_border">
+                      <label className="mb-10" htmlFor="companyName">
+                        Idea Presentation Participants Names
+                      </label>
+                      <div className="btn-wrp-form width-increase">
+                        <div className="two-wrp">
+                          {/* 1 */}
+                          <input
+                            className="mb-20"
+                            required
+                            type="text"
+                            disabled={true}
+                            value={Name}
+                            placeholder=""
+                          ></input>
+                          {/* 2 */}
+                          <input
+                            className="mb-20"
+                            id="Free_Fire_Participants_2"
+                            required
+                            type="text"
+                            disabled={EditableStateIdeaPresentation}
+                            value={Idea_Presentation_Participants_1}
+                            placeholder="Members Name"
+                            onChange={(e) =>
+                              set_Idea_Presentation_Participants_1(
+                                e.target.value
+                              )
+                            }
+                          ></input>
+                        </div>
+                      </div>
+                      <div className="btn-align-row submitRight">
+                        <div className="align-btn">
+                          <button
+                            className="btn-one"
+                            onClick={() => {
+                              checkConditionsIdea_Presentation();
+                            }}
+                          >
+                            <span>
+                              {EditableStateIdeaPresentation ? "Edit" : "Save"}
+                            </span>
+                          </button>
+                          <div className="errorLog">
+                            {Idea_Presentation_Error_log[0]}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                  {/* BGMI */}
+                  {BGMI && (
+                    <div className="form_border">
+                      <label className="mb-10" htmlFor="companyName">
+                        BGMI Participants Names
+                      </label>
+                      <div className="btn-wrp-form width-increase">
+                        <div className="two-wrp">
+                          {/* 1 */}
+                          <input
+                            className="mb-20"
+                            required
+                            type="text"
+                            disabled={true}
+                            value={Name}
+                            placeholder=""
+                          ></input>
+                          {/* 2 */}
+                          <input
+                            className="mb-20"
+                            required
+                            type="text"
+                            disabled={EditableStateBGMI}
+                            value={BGMI_Participants_2}
+                            placeholder="Members Name"
+                            onChange={(e) =>
+                              set_BGMI_Participants_2(e.target.value)
+                            }
+                          ></input>
+                          {/* 3 */}
+                          <input
+                            className="mb-20"
+                            required
+                            type="text"
+                            disabled={EditableStateBGMI}
+                            value={BGMI_Participants_3}
+                            placeholder="Members Name"
+                            onChange={(e) =>
+                              set_BGMI_Participants_3(e.target.value)
+                            }
+                          ></input>
+                          {/* 4 */}
+                          <input
+                            className="mb-20"
+                            required
+                            type="text"
+                            disabled={EditableStateBGMI}
+                            value={BGMI_Participants_4}
+                            placeholder="Members Name"
+                            onChange={(e) =>
+                              set_BGMI_Participants_4(e.target.value)
+                            }
+                          ></input>
+                        </div>
+                      </div>
+                      <div className="btn-align-row submitRight">
+                        <div className="align-btn">
+                          <button
+                            className="btn-one"
+                            onClick={() => {
+                              checkConditionsBGMI();
+                            }}
+                          >
+                            <span>{EditableStateBGMI ? "Edit" : "Save"}</span>
+                          </button>
+                          <div className="errorLog">{BGMI_Error_Log[0]}</div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Error Log */}
+                <div className="submit-div">
+                  <div className="errorLogSubmit">
+                    {errorLogs.length > 0 && errorLogs.map((err) => err)}
+                  </div>
+                  {/* Submit Button */}
+                  <div className="btn-align-row submitRight">
+                    <button
+                      className="btn-one-light btn-size"
+                      onClick={(e) => checkConditions(e)}
                     >
-                      {departmentsList.map((department) => (
-                        <Departments
-                          key={department.indexValue}
-                          {...department}
-                        />
-                      ))}
-                    </select>
-                  </div>
-
-                  {/* button for events */}
-                  <div className="checkout__item-left sub-bg main-grid-form">
-                    {/* Single Event Button */}
-                    <div className="form_border">
-                      <label className="mb-10" htmlFor="companyName">
-                        Individual Events
-                      </label>
-                      <div className="btn-wrp-form">
-                        {/*  */}
-                        {/*  */}
-                        {/* my Final thought  */}
-                        {/* NFS */}
-                        <div className="form-row">
-                          <div className={myCss.switch}>
-                            <input
-                              type="checkbox"
-                              id="NFS"
-                              value="NFS"
-                              onChange={(e) => setValues(e)}
-                            ></input>
-                            <label htmlFor="toggle">
-                              <i className={myCss.bulb}>
-                                <span className={myCss.bulbCenter}></span>
-                                <span className={myCss.filament1}></span>
-                                <span className={myCss.filament2}></span>
-                                <span className={myCss.reflections}>
-                                  <span></span>
-                                </span>
-                                <span className={myCss.sparks}>
-                                  <i className={myCss.spark1}></i>
-                                  <i className={myCss.spark2}></i>
-                                  <i className={myCss.spark3}></i>
-                                  <i className={myCss.spark4}></i>
-                                </span>
-                              </i>
-                            </label>
-                          </div>
-                          <div className="form-row">NFS</div>
-                        </div>
-                        {/* Poster Spoofing */}
-                        <div className="form-row">
-                          <div className={myCss.switch}>
-                            <input
-                              type="checkbox"
-                              id="PosterSpoofing"
-                              value="PosterSpoofing"
-                              onChange={(e) => setValues(e)}
-                            ></input>
-                            <label htmlFor="toggle">
-                              <i className={myCss.bulb}>
-                                <span className={myCss.bulbCenter}></span>
-                                <span className={myCss.filament1}></span>
-                                <span className={myCss.filament2}></span>
-                                <span className={myCss.reflections}>
-                                  <span></span>
-                                </span>
-                                <span className={myCss.sparks}>
-                                  <i className={myCss.spark1}></i>
-                                  <i className={myCss.spark2}></i>
-                                  <i className={myCss.spark3}></i>
-                                  <i className={myCss.spark4}></i>
-                                </span>
-                              </i>
-                            </label>
-                          </div>
-                          <div className="form-row">Poster Spoofing</div>
-                        </div>
-
-                        {/*  */}
-                        {/*  */}
-                        {/*  */}
-                      </div>
-                    </div>
-
-                    {/* Group */}
-                    <div className="form_border">
-                      <label className="mb-10" htmlFor="companyName">
-                        Group Events
-                      </label>
-                      <div className="btn-wrp-form">
-                        {/*  */}
-                        {/*  */}
-                        {/* my Final thought  */}
-                        {/* Idea Presentation */}
-                        <div className="form-row">
-                          <div className={myCss.switch}>
-                            <input
-                              type="checkbox"
-                              id="IdeaPresentation"
-                              value="IdeaPresentation"
-                              onChange={(e) => setValues(e)}
-                            ></input>
-                            <label htmlFor="toggle">
-                              <i className={myCss.bulb}>
-                                <span className={myCss.bulbCenter}></span>
-                                <span className={myCss.filament1}></span>
-                                <span className={myCss.filament2}></span>
-                                <span className={myCss.reflections}>
-                                  <span></span>
-                                </span>
-                                <span className={myCss.sparks}>
-                                  <i className={myCss.spark1}></i>
-                                  <i className={myCss.spark2}></i>
-                                  <i className={myCss.spark3}></i>
-                                  <i className={myCss.spark4}></i>
-                                </span>
-                              </i>
-                            </label>
-                          </div>
-                          <div className="form-row">Idea Presentation</div>
-                        </div>
-
-                        {/* Free fire */}
-                        <div className="form-row">
-                          <div className={myCss.switch}>
-                            <input
-                              type="checkbox"
-                              id="FreeFire"
-                              value="FreeFire"
-                              onChange={(e) => setValues(e)}
-                            ></input>
-                            <label htmlFor="toggle">
-                              <i className={myCss.bulb}>
-                                <span className={myCss.bulbCenter}></span>
-                                <span className={myCss.filament1}></span>
-                                <span className={myCss.filament2}></span>
-                                <span className={myCss.reflections}>
-                                  <span></span>
-                                </span>
-                                <span className={myCss.sparks}>
-                                  <i className={myCss.spark1}></i>
-                                  <i className={myCss.spark2}></i>
-                                  <i className={myCss.spark3}></i>
-                                  <i className={myCss.spark4}></i>
-                                </span>
-                              </i>
-                            </label>
-                          </div>
-                          <div className="form-row">Free Fire</div>
-                        </div>
-
-                        {/* BGMI */}
-                        <div className="form-row">
-                          <div className={myCss.switch}>
-                            <input
-                              type="checkbox"
-                              id="BGMI"
-                              value="BGMI"
-                              onChange={(e) => setValues(e)}
-                            ></input>
-                            <label htmlFor="toggle">
-                              <i className={myCss.bulb}>
-                                <span className={myCss.bulbCenter}></span>
-                                <span className={myCss.filament1}></span>
-                                <span className={myCss.filament2}></span>
-                                <span className={myCss.reflections}>
-                                  <span></span>
-                                </span>
-                                <span className={myCss.sparks}>
-                                  <i className={myCss.spark1}></i>
-                                  <i className={myCss.spark2}></i>
-                                  <i className={myCss.spark3}></i>
-                                  <i className={myCss.spark4}></i>
-                                </span>
-                              </i>
-                            </label>
-                          </div>
-                          <div className="form-row">BGMI</div>
-                        </div>
-
-                        {/*  */}
-                        {/*  */}
-                        {/*  */}
-                      </div>
-                    </div>
-                    {/*  */}
-                    {/*  */}
-                    {/*  */}
-
-                    {/* Free Fire */}
-                    {Free_Fire && (
-                      <div className="form_border">
-                        <label className="mb-10" htmlFor="companyName">
-                          Free Fire Participants Names
-                        </label>
-                        <div className="btn-wrp-form width-increase">
-                          <div className="two-wrp">
-                            {/* 1 */}
-                            <input
-                              className="mb-20"
-                              required
-                              type="text"
-                              disabled={true}
-                              value={Name}
-                              placeholder=""
-                            ></input>
-                            {/* 2 */}
-                            <input
-                              className="mb-20"
-                              id="Free_Fire_Participants_2"
-                              required
-                              type="text"
-                              disabled={EditableStateFreeFire}
-                              value={Free_Fire_Participants_2}
-                              placeholder="Members Name"
-                              onChange={(e) =>
-                                set_Free_Fire_Participants_2(e.target.value)
-                              }
-                            ></input>
-                            {/* 3 */}
-                            <input
-                              className="mb-20"
-                              id="Free_Fire_Participants_3"
-                              required
-                              type="text"
-                              disabled={EditableStateFreeFire}
-                              value={Free_Fire_Participants_3}
-                              placeholder="Members Name"
-                              onChange={(e) =>
-                                set_Free_Fire_Participants_3(e.target.value)
-                              }
-                            ></input>
-                            {/* 4 */}
-                            <input
-                              className="mb-20"
-                              id="Free_Fire_Participants_4"
-                              required
-                              type="text"
-                              disabled={EditableStateFreeFire}
-                              value={Free_Fire_Participants_4}
-                              placeholder="Members Name"
-                              onChange={(e) =>
-                                set_Free_Fire_Participants_4(e.target.value)
-                              }
-                            ></input>
-                          </div>
-                        </div>
-                        <div className="btn-align-row submitRight">
-                          <div className="align-btn">
-                            <button
-                              className="btn-one"
-                              onClick={() => {
-                                checkConditionsFreeFire();
-                              }}
-                            >
-                              <span>
-                                {EditableStateFreeFire ? "Edit" : "Save"}
-                              </span>
-                            </button>
-                            <div className="errorLog">
-                              {Free_Fire_Error_Log[0]}{" "}
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    )}
-
-                    {/* Idea Presentation */}
-                    {Idea_Presentation && (
-                      <div className="form_border">
-                        <label className="mb-10" htmlFor="companyName">
-                          Idea Presentation Participants Names
-                        </label>
-                        <div className="btn-wrp-form width-increase">
-                          <div className="two-wrp">
-                            {/* 1 */}
-                            <input
-                              className="mb-20"
-                              required
-                              type="text"
-                              disabled={true}
-                              value={Name}
-                              placeholder=""
-                            ></input>
-                            {/* 2 */}
-                            <input
-                              className="mb-20"
-                              id="Free_Fire_Participants_2"
-                              required
-                              type="text"
-                              disabled={EditableStateIdeaPresentation}
-                              value={Idea_Presentation_Participants_1}
-                              placeholder="Members Name"
-                              onChange={(e) =>
-                                set_Idea_Presentation_Participants_1(
-                                  e.target.value
-                                )
-                              }
-                            ></input>
-                          </div>
-                        </div>
-                        <div className="btn-align-row submitRight">
-                          <div className="align-btn">
-                            <button
-                              className="btn-one"
-                              onClick={() => {
-                                checkConditionsIdea_Presentation();
-                              }}
-                            >
-                              <span>
-                                {EditableStateIdeaPresentation
-                                  ? "Edit"
-                                  : "Save"}
-                              </span>
-                            </button>
-                            <div className="errorLog">
-                              {Idea_Presentation_Error_log[0]}
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    )}
-                    {/* BGMI */}
-                    {BGMI && (
-                      <div className="form_border">
-                        <label className="mb-10" htmlFor="companyName">
-                          BGMI Participants Names
-                        </label>
-                        <div className="btn-wrp-form width-increase">
-                          <div className="two-wrp">
-                            {/* 1 */}
-                            <input
-                              className="mb-20"
-                              required
-                              type="text"
-                              disabled={true}
-                              value={Name}
-                              placeholder=""
-                            ></input>
-                            {/* 2 */}
-                            <input
-                              className="mb-20"
-                              required
-                              type="text"
-                              disabled={EditableStateBGMI}
-                              value={BGMI_Participants_2}
-                              placeholder="Members Name"
-                              onChange={(e) =>
-                                set_BGMI_Participants_2(e.target.value)
-                              }
-                            ></input>
-                            {/* 3 */}
-                            <input
-                              className="mb-20"
-                              required
-                              type="text"
-                              disabled={EditableStateBGMI}
-                              value={BGMI_Participants_3}
-                              placeholder="Members Name"
-                              onChange={(e) =>
-                                set_BGMI_Participants_3(e.target.value)
-                              }
-                            ></input>
-                            {/* 4 */}
-                            <input
-                              className="mb-20"
-                              required
-                              type="text"
-                              disabled={EditableStateBGMI}
-                              value={BGMI_Participants_4}
-                              placeholder="Members Name"
-                              onChange={(e) =>
-                                set_BGMI_Participants_4(e.target.value)
-                              }
-                            ></input>
-                          </div>
-                        </div>
-                        <div className="btn-align-row submitRight">
-                          <div className="align-btn">
-                            <button
-                              className="btn-one"
-                              onClick={() => {
-                                checkConditionsBGMI();
-                              }}
-                            >
-                              <span>{EditableStateBGMI ? "Edit" : "Save"}</span>
-                            </button>
-                            <div className="errorLog">{BGMI_Error_Log[0]}</div>
-                          </div>
-                        </div>
-                      </div>
-                    )}
-                  </div>
-
-                  {/* Error Log */}
-                  <div className="submit-div">
-                    <div className="errorLogSubmit">
-                      {errorLogs.length > 0 && errorLogs.map((err) => err)}
-                    </div>
-                    {/* Submit Button */}
-                    <div className="btn-align-row submitRight">
-                      <button
-                        className="btn-one-light btn-size"
-                        onClick={(e) => checkConditions(e)}
-                      >
-                        <span>Submit</span>
-                      </button>
-                    </div>
+                      <span>Submit</span>
+                    </button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      ) : (
+      </div>
+
+      {checkSubmit && (
         <div className="container center-grid">
-          <div className="row g-4">
-            <div id="myForm" className="checkout__item-left sub-bg">
-              <div className="my-div">
-                <h4>Thank you {Name} for registering.</h4>
-                <p>See you soon</p>
-              </div>
-            </div>
+          <div className="btn-wrp-form">
+            <SnackBar />
           </div>
         </div>
       )}

@@ -172,28 +172,31 @@ import event2 from "../assets/img/EventsImges/PosterSpoofing.jpeg";
 import event3 from "../assets/img/EventsImges/NFS.jpeg";
 import event5 from "../assets/img/EventsImges/BGMI.jpeg";
 import event4 from "../assets/img/EventsImges/FreeFire.jpeg";
-
+const date = '19/04/2024'
 export const eventDataList = [
   {
     key: 1,
     image: event2,
     eventName: "Poster spoofing",
     typeOfEvent: "Lab 1",
-    date: "12:30 PM",
+    time: "12:30 PM",
+    date: date
   },
   {
     key: 2,
     image: event3,
     eventName: "NFS",
     typeOfEvent: "Lab 2",
-    date: "12:30 PM",
+    time: "12:30 PM",
+    date: date
   },
   {
     key: 3,
     image: event1,
     eventName: "Idea Presentation",
-    typeOfEvent: "Mini-Auditorium",
-    date: "1:30 PM",
+    typeOfEvent: "Mini-Audi",
+    time: "1:30 PM",
+    date: date
   },
 
   {
@@ -201,14 +204,16 @@ export const eventDataList = [
     image: event5,
     eventName: "BGMI",
     typeOfEvent: "Class Room: 107",
-    date: "1:30 PM",
+    time: "1:30 PM",
+    date: date
   },
   {
     key: 5,
     image: event4,
     eventName: "Free fire",
     typeOfEvent: "Class Room: 106",
-    date: "2:00 PM",
+    time: "2:00 PM",
+    date: date
   },
 ];
 
