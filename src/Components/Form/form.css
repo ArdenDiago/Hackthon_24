@@ -4,7 +4,7 @@
   margin-bottom: 20px;
   width: 100%;
   height: 50px;
-  font-size: 20px;
+  font-size: 17px;
 }
 .span_color {
   color: red;
@@ -137,7 +137,14 @@
   z-index: 1;
 }
 
-
+.my-div h4{
+  justify-content: center;
+}
+.my-div h5, p, button{
+  color: rgb(209, 209, 209);
+  padding-top: 20px;
+  justify-content: center;
+}
 .spinner {
   width: 64px;
   height: 64px;
@@ -201,6 +208,10 @@
 }
 
 @media screen and (max-width: 425px) {
+  .my-div {
+    text-align: center;
+  }
+  
   .submit-div {
     grid-template-columns: auto;
     row-gap: 10px;

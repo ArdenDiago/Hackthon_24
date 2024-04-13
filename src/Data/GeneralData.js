@@ -185,28 +185,28 @@ export const eventDataList = [
     key: 2,
     image: event2,
     eventName: "Poster spoofing",
-    typeOfEvent: "Class Room",
+    typeOfEvent: "Lab 1",
     date: "19/04/20204",
   },
   {
     key: 3,
     image: event3,
     eventName: "NFS",
-    typeOfEvent: "Gaming",
+    typeOfEvent: "Lab 2",
     date: "19/04/20204",
   },
   {
     key: 4,
     image: event4,
     eventName: "Free fire",
-    typeOfEvent: "Gaming",
+    typeOfEvent: "Class Room: 106",
     date: "19/04/20204",
   },
   {
     key: 5,
     image: event5,
     eventName: "BGMI",
-    typeOfEvent: "Gaming",
+    typeOfEvent: "Class Room: 107",
     date: "19/04/20204",
   },
 ];
@@ -241,7 +241,7 @@ export const multiPlayerEvents = [
 export const departmentsList = [
   {
     indexValue: 0,
-    text: "Select You'r Class",
+    text: "Select Your Class",
   },
   {
     indexValue: 1,
