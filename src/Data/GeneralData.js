@@ -176,38 +176,39 @@ import event4 from "../assets/img/EventsImges/FreeFire.jpeg";
 export const eventDataList = [
   {
     key: 1,
-    image: event1,
-    eventName: "Idea Presentation",
-    typeOfEvent: "Mini-Auditorium",
-    date: "19/04/20204",
-  },
-  {
-    key: 2,
     image: event2,
     eventName: "Poster spoofing",
     typeOfEvent: "Lab 1",
-    date: "19/04/20204",
+    date: "12:30 PM",
   },
   {
-    key: 3,
+    key: 2,
     image: event3,
     eventName: "NFS",
     typeOfEvent: "Lab 2",
-    date: "19/04/20204",
+    date: "12:30 PM",
   },
+  {
+    key: 3,
+    image: event1,
+    eventName: "Idea Presentation",
+    typeOfEvent: "Mini-Auditorium",
+    date: "1:30 PM",
+  },
+
   {
     key: 4,
-    image: event4,
-    eventName: "Free fire",
-    typeOfEvent: "Class Room: 106",
-    date: "19/04/20204",
-  },
-  {
-    key: 5,
     image: event5,
     eventName: "BGMI",
     typeOfEvent: "Class Room: 107",
-    date: "19/04/20204",
+    date: "1:30 PM",
+  },
+  {
+    key: 5,
+    image: event4,
+    eventName: "Free fire",
+    typeOfEvent: "Class Room: 106",
+    date: "2:00 PM",
   },
 ];
 
