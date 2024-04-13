@@ -51,19 +51,10 @@ export default function Slider({
                   <span>Register Now</span>
                 </a>
               </div>
+
               <div className="btn-align-row">
                 <a
                   className="btn-one-light"
-                  href={detailsLink}
-                  data-animation="fadeInUp"
-                  data-delay="1.9s"
-                >
-                  <span>Brochure</span>
-                </a>
-              </div>
-              <div className="btn-align-row">
-                <a
-                  className="btn-one"
                   href={detailsLink}
                   data-animation="fadeInUp"
                   data-delay="1.9s"
