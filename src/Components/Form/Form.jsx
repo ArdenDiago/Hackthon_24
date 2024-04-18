@@ -21,7 +21,7 @@ export default function Form() {
   const [Class_Dept, setDepartment] = useState(0);
   const [Poster_Spoofing, setPosterSpoofing] = useState(false);
   const [NFS, setNFS] = useState(false);
-  const [EFootball, setEFootball] = useState(false);
+  const [E_Football, setEFootball] = useState(false);
   const [Idea_Presentation, setIdeaPresentation] = useState(false);
   const [Free_Fire, setFreeFire] = useState(false);
   const [BGMI, setBGMI] = useState(false);
