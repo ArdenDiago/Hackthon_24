@@ -63,9 +63,8 @@ export default function Form() {
     if (eventName === "NFS") {
       setNFS(!NFS);
     } else if (eventName == "EFootball") {
-      setEFootball(!EFootball);
-    }
-    else if (eventName === "PosterSpoofing") {
+      setEFootball(!E_Football);
+    } else if (eventName === "PosterSpoofing") {
       setPosterSpoofing(!Poster_Spoofing);
     } else if (eventName === "IdeaPresentation") {
       setIdeaPresentation(!Idea_Presentation);
@@ -258,7 +257,7 @@ export default function Form() {
 
       setTimeout(() => {
         setSubmit(false);
-        window.location.reload(window.location.href+'#form_section');
+        window.location.reload(window.location.href + "#form_section");
       }, 5000);
     }
   }
