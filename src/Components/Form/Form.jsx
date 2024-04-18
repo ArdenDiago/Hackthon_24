@@ -21,6 +21,7 @@ export default function Form() {
   const [Class_Dept, setDepartment] = useState(0);
   const [Poster_Spoofing, setPosterSpoofing] = useState(false);
   const [NFS, setNFS] = useState(false);
+  const [EFootball, setEFootball] = useState(false);
   const [Idea_Presentation, setIdeaPresentation] = useState(false);
   const [Free_Fire, setFreeFire] = useState(false);
   const [BGMI, setBGMI] = useState(false);
@@ -61,7 +62,10 @@ export default function Form() {
     const eventName = e.target.value;
     if (eventName === "NFS") {
       setNFS(!NFS);
-    } else if (eventName === "PosterSpoofing") {
+    } else if (eventName == "EFootball") {
+      setEFootball(!EFootball);
+    }
+    else if (eventName === "PosterSpoofing") {
       setPosterSpoofing(!Poster_Spoofing);
     } else if (eventName === "IdeaPresentation") {
       setIdeaPresentation(!Idea_Presentation);
@@ -247,6 +251,7 @@ export default function Form() {
           Free_Fire_Team,
           Idea_Presentation_Team,
           BGMI_Team,
+          E_Football,
         }
       );
       setSubmit(true);
@@ -342,6 +347,34 @@ export default function Form() {
                           </label>
                         </div>
                         <div className="form-row">NFS</div>
+                      </div>
+                      {/* E Football */}
+                      <div className="form-row">
+                        <div className={myCss.switch}>
+                          <input
+                            type="checkbox"
+                            id="NFS"
+                            value="EFootball"
+                            onChange={(e) => setValues(e)}
+                          ></input>
+                          <label htmlFor="toggle">
+                            <i className={myCss.bulb}>
+                              <span className={myCss.bulbCenter}></span>
+                              <span className={myCss.filament1}></span>
+                              <span className={myCss.filament2}></span>
+                              <span className={myCss.reflections}>
+                                <span></span>
+                              </span>
+                              <span className={myCss.sparks}>
+                                <i className={myCss.spark1}></i>
+                                <i className={myCss.spark2}></i>
+                                <i className={myCss.spark3}></i>
+                                <i className={myCss.spark4}></i>
+                              </span>
+                            </i>
+                          </label>
+                        </div>
+                        <div className="form-row">E Football</div>
                       </div>
                       {/* Poster Spoofing */}
                       <div className="form-row">

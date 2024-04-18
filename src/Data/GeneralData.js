@@ -76,6 +76,7 @@ import bgHackthon from "../assets/img/PhoneMedia/Hackthon.jpeg";
 import bgNFS from "../assets/img/PhoneMedia/NFS.jpeg";
 import bgFreeFire from "../assets/img/PhoneMedia/FreeFire.jpeg";
 import bgBGMI from "../assets/img/PhoneMedia/BGMI.jpeg";
+import EFootball from "../assets/img/PhoneMedia/EFootball.jpg";
 
 export const sliderInfo = [
   {
@@ -117,6 +118,16 @@ export const sliderInfo = [
     overlayer: "back_color",
     text: "Enter the battlegrounds in our BGMI tournament at the Intra-Collegiate Techno Fest! Strategize, survive, and dominate to emerge as the last one standing in this epic gaming battle!",
   },
+  {
+    key: 6,
+    parentCSS: "swiper-slide myMargin",
+    backGround: EFootball,
+    detailsLink: "#0",
+    formLink: "#0",
+    eventName: "E Football",
+    overlayer: "back_color",
+    text: 'Showcase your virtual soccer skills in our E Football tournament at the Intra-Collegiate Techno Fest! Score goals, make plays, and compete to be crowned the champion of the digital pitch!'
+  }
 ];
 
 import o1 from "../assets/img/team/01.jpg";
@@ -172,6 +183,7 @@ import event2 from "../assets/img/EventsImges/PosterSpoofing.jpeg";
 import event3 from "../assets/img/EventsImges/NFS.jpeg";
 import event5 from "../assets/img/EventsImges/BGMI.jpeg";
 import event4 from "../assets/img/EventsImges/FreeFire.jpeg";
+import event6 from "../assets/img/EventsImges/E_Football.jpeg";
 const date = '19/04/2024'
 export const eventDataList = [
   {
@@ -198,9 +210,16 @@ export const eventDataList = [
     time: "1:30 PM",
     date: date
   },
-
   {
     key: 4,
+    image: event6,
+    eventName: "E Football",
+    typeOfEvent: "Lab 1",
+    time: "1:30 PM",
+    date: date
+  },
+  {
+    key: 5,
     image: event5,
     eventName: "BGMI",
     typeOfEvent: "Class Room: 107",
@@ -208,13 +227,14 @@ export const eventDataList = [
     date: date
   },
   {
-    key: 5,
+    key: 6,
     image: event4,
     eventName: "Free fire",
     typeOfEvent: "Class Room: 106",
     time: "2:00 PM",
     date: date
   },
+
 ];
 
 export const singleEvents = [
