@@ -256,10 +256,10 @@ export default function Form() {
       // );
       setSubmit(true);
 
-      setTimeout(() => {
-        setSubmit(false);
-        window.location.reload(window.location.href + "#form_section");
-      }, 5000);
+      // setTimeout(() => {
+      //   setSubmit(false);
+      //   window.location.reload(window.location.href + "#form_section");
+      // }, 5000);
     }
   }
   // Members
