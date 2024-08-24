@@ -236,23 +236,24 @@ export default function Form() {
 
     // Database
     if (errorLogs.length === 0) {
-      axios.post(
-        `https://sheet.best/api/sheets/4c28782e-bb0e-4980-ab1a-a0583769b4b1`,
-        {
-          Name,
-          Phone_NO,
-          Class_Dept,
-          Poster_Spoofing,
-          NFS,
-          Idea_Presentation,
-          Free_Fire,
-          BGMI,
-          Free_Fire_Team,
-          Idea_Presentation_Team,
-          BGMI_Team,
-          E_Football,
-        }
-      );
+      // axios.post(
+      //   `https://sheet.best/api/sheets/4c28782e-bb0e-4980-ab1a-a0583769b4b1`,
+      //   {
+      //     Name,
+      //     Phone_NO,
+      //     Class_Dept,
+      //     Poster_Spoofing,
+      //     NFS,
+      //     Idea_Presentation,
+      //     Free_Fire,
+      //     BGMI,
+      //     Free_Fire_Team,
+      //     Idea_Presentation_Team,
+      //     BGMI_Team,
+      //     E_Football,
+      //   }
+      // No More in Use
+      // );
       setSubmit(true);
 
       setTimeout(() => {

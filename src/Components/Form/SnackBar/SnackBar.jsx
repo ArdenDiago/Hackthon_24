@@ -34,7 +34,9 @@ export default function SnackBar() {
         </div>
       </div>
       <div>
-      Registration Successful</div>
+      {/* Registration Successful */}
+      The Backend is not longer Active. Contact the Developer for more details. diagoarden@gmail.com.
+      </div>
     </div>
   );
 }
